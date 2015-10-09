@@ -20,10 +20,11 @@ def send_list():
                 yield x
         f = getF()
         fff = f.next()[2]
-        if '01_SEND.py' in fff:
-            fff.remove('01_SEND.py')
-        if '00_GET.py' in fff:
-            fff.remove('00_GET.py')
+        #Make sure our scripts don't get deleted
+        if 'Server.py' in fff:
+            fff.remove('Server.py')
+        if 'Client.py' in fff:
+            fff.remove('Client.py')
         return fff
     def list_to_text(my_list):
         y = ''
